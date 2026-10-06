@@ -1,267 +1,310 @@
 :root {
-  --paper: #efeeeb;
-  --ink: #0a4d47;
-  --title-warm: #ef7d00;
-  --title-cool: #97d2e3;
-  --line: #b9d0c8;
-  --card: rgba(255, 255, 255, 0.72);
-  --shadow: rgba(12, 71, 65, 0.18);
+  color-scheme: light;
+  --paper: #f4f4ed;
+  --ink: #173e36;
+  --canal: #17483f;
+  --leaf: #dce8db;
+  --orange: #ed9a46;
+  --line: #d4ddd2;
+  --white: #fffefa;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Cormorant Garamond", "Book Antiqua", Georgia, serif;
-  line-height: 1.35;
+html {
+  scroll-behavior: smooth;
 }
 
-.page-decoration {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  background:
-    radial-gradient(1200px 500px at 95% 105%, rgba(129, 186, 126, 0.35), transparent 65%),
-    radial-gradient(1000px 500px at -10% 110%, rgba(245, 167, 91, 0.2), transparent 65%),
-    repeating-linear-gradient(
-      -45deg,
-      transparent 0,
-      transparent 18px,
-      rgba(12, 71, 65, 0.02) 18px,
-      rgba(12, 71, 65, 0.02) 20px
-    );
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
 }
 
 .hero {
-  padding: 2.2rem 1rem 1.3rem;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at 95% 110%, rgba(151, 210, 190, 0.16), transparent 46%),
+    radial-gradient(ellipse at -10% -35%, rgba(237, 154, 70, 0.15), transparent 55%),
+    var(--canal);
 }
 
-.hero-card {
-  max-width: 980px;
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6.5rem);
+  width: min(1120px, 100%);
+  min-height: 390px;
   margin: 0 auto;
-  text-align: center;
-  border-radius: 28px;
-  background: var(--card);
-  border: 1px solid rgba(10, 77, 71, 0.2);
-  box-shadow: 0 24px 40px -30px var(--shadow);
-  backdrop-filter: blur(3px);
-  padding: 1.2rem 1rem 2rem;
-  animation: rise-in 700ms ease-out both;
+  padding: 3.5rem 2rem;
+}
+
+.brand-mark {
+  padding: 0.55rem;
+  border-radius: 0.45rem;
+  background: var(--white);
+  box-shadow: 0 20px 45px rgba(8, 31, 26, 0.18);
 }
 
 .logo {
-  width: min(560px, 96%);
+  display: block;
+  width: 100%;
   height: auto;
-  border-radius: 7px;
-  filter: saturate(0.95) contrast(1.03);
 }
 
 .vereniging {
-  margin: 1.4rem 0 0;
-  letter-spacing: 0.04em;
-  font-size: clamp(1.1rem, 3vw, 1.55rem);
+  margin: 0 0 0.55rem;
+  color: #e6d5b4;
+  font-size: 0.92rem;
+  letter-spacing: 0.025em;
 }
 
-h1 {
-  margin: 0.45rem 0 0;
-  display: grid;
-  gap: 0.1em;
+.hero h1,
+.section-header h2,
+.activity-copy h3 {
+  font-family: "Sorts Mill Goudy", Georgia, serif;
+  font-weight: 400;
 }
 
-.headline-main,
-.headline-sub {
-  font-family: "Sorts Mill Goudy", "Times New Roman", serif;
-  font-size: clamp(3rem, 11vw, 7rem);
-  line-height: 0.95;
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3.25rem, 7vw, 5.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
   text-wrap: balance;
 }
 
-.headline-main {
-  color: var(--title-warm);
-}
-
-.headline-sub {
-  color: var(--title-cool);
-}
-
 .intro {
-  max-width: 34ch;
-  margin: 1.2rem auto 0;
-  font-size: clamp(1.35rem, 3vw, 2rem);
-}
-
-.hero-contact {
-  margin: 1.4rem 0 0;
+  max-width: 39ch;
+  margin: 1.1rem 0 1.5rem;
+  color: rgba(255, 254, 250, 0.86);
+  font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
 .contact-link {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  border: 1px solid rgba(10, 77, 71, 0.35);
-  color: var(--ink);
-  background: linear-gradient(145deg, rgba(151, 210, 227, 0.45), rgba(255, 255, 255, 0.9));
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid var(--orange);
+  border-radius: 3px;
+  background: var(--orange);
+  color: #203a30;
+  font-size: 1rem;
+  font-weight: 700;
   text-decoration: none;
-  font-family: "Sorts Mill Goudy", "Times New Roman", serif;
-  font-size: clamp(1.12rem, 2.2vw, 1.45rem);
-  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  transition: background-color 160ms ease, color 160ms ease;
 }
 
-.contact-link:hover,
-.contact-link:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px -14px rgba(10, 77, 71, 0.9);
-  background: linear-gradient(145deg, rgba(151, 210, 227, 0.72), rgba(255, 255, 255, 0.96));
+.contact-link:hover {
+  background: #f5b66f;
 }
 
 .content {
-  max-width: 1160px;
+  width: min(1020px, 100%);
   margin: 0 auto;
-  padding: 0 1rem 3.2rem;
-}
-
-.activiteiten {
-  border-radius: 26px;
-  padding: 1.4rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.9));
-  border: 1px solid rgba(10, 77, 71, 0.2);
-  box-shadow: 0 24px 40px -30px var(--shadow);
-  animation: rise-in 850ms 120ms ease-out both;
+  padding: 3.7rem 2rem 4rem;
 }
 
 .section-header {
-  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 0.68fr);
+  align-items: end;
+  gap: 2rem;
+  padding-bottom: 1.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-kicker {
+  margin: 0 0 0.4rem;
+  color: #496c5d;
+  font-size: 0.92rem;
 }
 
 .section-header h2 {
   margin: 0;
-  font-family: "Sorts Mill Goudy", "Times New Roman", serif;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.65rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
 }
 
-.section-header p {
-  margin: 0.5rem 0 0;
-  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
-  max-width: 55ch;
+.section-header h2 span {
+  display: inline-block;
+  margin-left: 0.25rem;
+  color: #648276;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.43em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  vertical-align: 0.22em;
 }
 
-.table-wrap {
-  overflow-x: auto;
-  border-top: 2px dotted rgba(239, 125, 0, 0.75);
-  padding-top: 1rem;
+.section-intro {
+  max-width: 39ch;
+  margin: 0;
+  color: #466057;
+  font-size: 1rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 760px;
-  font-size: clamp(1.1rem, 2.1vw, 1.4rem);
+.activity-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-thead th {
-  text-align: left;
-  padding: 0.8rem 0.7rem;
-  font-family: "Sorts Mill Goudy", "Times New Roman", serif;
-  font-size: clamp(1.2rem, 2.3vw, 1.7rem);
-  border-bottom: 2px solid rgba(10, 77, 71, 0.45);
-}
-
-tbody td {
-  padding: 0.75rem 0.7rem;
+.activity-row {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1.15rem;
+  min-height: 92px;
+  padding: 1.05rem 0.6rem;
   border-bottom: 1px solid var(--line);
-  vertical-align: top;
 }
 
-tbody tr {
-  transition: transform 180ms ease, background-color 180ms ease;
+.date-badge {
+  display: flex;
+  width: fit-content;
+  min-width: 6.7rem;
+  min-height: 54px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.65rem;
+  border-left: 3px solid var(--orange);
+  background: var(--leaf);
+  color: var(--ink);
+  text-align: center;
+  text-decoration: none;
 }
 
-tbody tr:hover {
-  transform: none;
-  background: rgba(151, 210, 227, 0.15);
+.date-day {
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.date-month {
+  margin-top: 0.1rem;
+  font-size: 0.78rem;
+  line-height: 1.25;
 }
 
-@media (max-width: 760px) {
-  .hero {
-    padding-top: 1.1rem;
+.date-badge--open {
+  border-left-color: #91afa0;
+  background: #e8ece3;
+  font-size: 0.83rem;
+  font-weight: 700;
+}
+
+.activity-type {
+  color: #557565;
+  font-size: 0.78rem;
+}
+
+.activity-copy h3 {
+  margin: 0.1rem 0 0;
+  font-size: clamp(1.3rem, 2.8vw, 1.65rem);
+  line-height: 1.25;
+}
+
+.activity-note {
+  margin: 0.1rem 0 0;
+  color: #52665d;
+  font-size: 0.88rem;
+}
+
+.agenda-note {
+  margin: 1.8rem 0 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.agenda-note a {
+  font-weight: 700;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 680px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.7rem;
+    min-height: 0;
+    padding: 2.2rem 1.25rem 2.6rem;
   }
 
-  .hero-card {
-    border-radius: 18px;
-    padding-bottom: 1.5rem;
+  .brand-mark {
+    width: min(340px, 100%);
   }
 
-  .activiteiten {
-    padding: 1rem;
+  .hero h1 {
+    font-size: clamp(3.15rem, 14vw, 4.4rem);
   }
 
-  .table-wrap {
-    overflow-x: visible;
+  .content {
+    padding: 2.7rem 1.2rem 3rem;
   }
 
-  table {
+  .section-header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.9rem;
+    padding-bottom: 1.3rem;
+  }
+
+  .activity-row {
+    grid-template-columns: 5.7rem minmax(0, 1fr);
+    gap: 0.8rem;
+    min-height: 84px;
+    padding: 0.9rem 0;
+  }
+
+  .date-badge {
+    width: 5.55rem;
     min-width: 0;
+    min-height: 52px;
+    padding: 0.3rem 0.25rem;
   }
 
-  thead {
-    display: none;
+  .date-month {
+    font-size: 0.72rem;
   }
 
-  tbody {
-    display: grid;
-    gap: 0.85rem;
+  .date-badge--open {
+    font-size: 0.75rem;
   }
 
-  tbody tr {
-    display: grid;
-    gap: 0.35rem;
-    padding: 0.9rem 0.95rem;
-    border: 1px solid rgba(10, 77, 71, 0.14);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.78);
+  .activity-copy h3 {
+    font-size: 1.3rem;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  tbody td {
-    padding: 0;
-    border-bottom: 0;
-  }
-
-  tbody td:last-child {
-    order: -1;
-    font-family: "Sorts Mill Goudy", "Times New Roman", serif;
-    font-size: 1.1rem;
-    color: rgba(10, 77, 71, 0.88);
-  }
-
-  tbody td:last-child::before {
-    content: "Datum";
-    display: block;
-    margin-bottom: 0.12rem;
-    font-size: 0.82rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(10, 77, 71, 0.65);
-  }
-
-  tbody td:first-child {
-    font-size: 1.2rem;
-    line-height: 1.2;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }

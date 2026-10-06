@@ -3,138 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buurtvereniging Sompen en Zooislagen</title>
     <meta
       name="description"
-      content="Website van Buurtvereniging Sompen en Zooislagen met activiteiten en praktische informatie."
+      content="Ontdek de activiteiten van Buurtvereniging Sompen en Zooislagen en doe gezellig mee."
     />
+    <meta name="theme-color" content="#17483f" />
+    <title>Buurtvereniging Sompen en Zooislagen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Sorts+Mill+Goudy:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-decoration" aria-hidden="true"></div>
-
     <header class="hero">
-      <div class="hero-card">
-        <img
-          class="logo"
-          src="assets_extracted/page1_img1.jpg"
-          alt="Logo van Buurtvereniging Sompen en Zooislagen"
-        />
-
-        <p class="vereniging">Buurtvereniging Sompen en Zooislagen</p>
-        <h1>
-          <span class="headline-main">Welkom</span>
-          <span class="headline-sub">in de buurt!</span>
-        </h1>
-
-        <p class="intro">
-          We zouden het gezellig vinden als jullie lid worden van onze buurtvereniging.
-          Een leuke manier om buurtbewoners te leren kennen.
-        </p>
-
-        <p class="hero-contact">
+      <div class="hero-inner">
+        <div class="brand-mark">
+          <img
+            class="logo"
+            src="assets_extracted/page1_img1.jpg"
+            alt="Sompen en Zooislagen — buurtvereniging van de Oude Haven, Inlaagdijk en Voordijk in Haarsteeg"
+          />
+        </div>
+        <div class="hero-copy">
+          <p class="vereniging">Buurtvereniging Sompen en Zooislagen</p>
+          <h1>Meer buurt.<br />Meer plezier.</h1>
+          <p class="intro">
+            Samen wandelen, eten of bijpraten: er is altijd een leuke reden om
+            elkaar te ontmoeten.
+          </p>
           <a
             class="contact-link"
             href="https://forms.gle/4sLocw3XJjnkvDiP9"
             target="_blank"
             rel="noopener noreferrer"
-            >Neem contact met ons op</a
+            >Word lid of stel een vraag</a
           >
-        </p>
+        </div>
       </div>
     </header>
 
     <main class="content">
-      <section class="activiteiten" aria-labelledby="activiteiten-titel">
+      <section class="agenda" aria-labelledby="agenda-title">
         <div class="section-header">
-          <h2 id="activiteiten-titel">Activiteiten 2026</h2>
-          <p>
-            Een overzicht van geplande buurtactiviteiten.
+          <div>
+            <p class="section-kicker">Samen op pad, aan tafel en aan de slag</p>
+            <h2 id="agenda-title">De buurtagenda <span>2026</span></h2>
+          </div>
+          <p class="section-intro">
+            Van een wandeling tot een spelletjesavond: kies iets leuks en doe
+            mee. Bij activiteiten zonder vaste datum volgt later meer
+            informatie.
           </p>
         </div>
 
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Naam</th>
-                <th>Datum en tijd</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Nieuwjaarstreffen</td>
-                <td>8 februari</td>
-              </tr>
-              <tr>
-                <td>Zwerfafval</td>
-                <td>Zaterdag 11 april</td>
-              </tr>
-              <tr>
-                <td>Spelletjesavond</td>
-                <td>Zaterdag 25 april</td>
-              </tr>
-              <tr>
-                <td>Zwerfafval</td>
-                <td>Zaterdag 2 mei</td>
-              </tr>
-              <tr>
-                <td>Rondleiding wandeling Eendenkooi</td>
-                <td>Zondag 17 mei om 11.00 uur</td>
-              </tr>
-              <tr>
-                <td>Spelletjesavond</td>
-                <td>Nader te bepalen</td>
-              </tr>
-              <tr>
-                <td>Buitenbios</td>
-                <td>In de zomerperiode</td>
-              </tr>
-              <tr>
-                <td>Film Ontbijt bij de Verkadefabriek</td>
-                <td>Een zondag in het najaar om 10.30 uur</td>
-              </tr>
-              <tr>
-                <td>Zwerfafval</td>
-                <td>Zaterdag 29 augustus</td>
-              </tr>
-              <tr>
-                <td>Herfstwandeling in oktober</td>
-                <td>Nader te bepalen</td>
-              </tr>
-              <tr>
-                <td>Barbecue</td>
-                <td>Zaterdag 17 Oktober</td>
-              </tr>
-              <tr>
-                <td>Schilderen in het Atelier (Haarsteeg)</td>
-                <td>Nader te bepalen</td>
-              </tr>
-              <tr>
-                <td>Zwerfafval</td>
-                <td>Zaterdag 14 november</td>
-              </tr>
-              <tr>
-                <td>Lasergamen of voetballen op de Hoge Heide</td>
-                <td>Nader te bepalen</td>
-              </tr>
-              <tr>
-                <td>Spelletjesavond</td>
-                <td>Nader te bepalen</td>
-              </tr>
-              <tr>
-                <td>Knutselavond (thema Kerst)</td>
-                <td>Nader te bepalen</td>
-              </tr>              
-            </tbody>
-          </table>
-        </div>
+        <ol class="activity-list">
+          <li class="activity-row">
+            <time class="date-badge" datetime="2026-02-08">
+              <span class="date-day">8</span>
+              <span class="date-month">februari</span>
+            </time>
+            <div class="activity-copy">
+              <span class="activity-type">Ontmoeten</span>
+              <h3>Nieuwjaarstreffen</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <time class="date-badge" datetime="2026-04-11">
+              <span class="date-day">11</span>
+              <span class="date-month">april</span>
+            </time>
+            <div class="activity-copy">
+              <span class="activity-type">Samen buiten</span>
+              <h3>Zwerfafval opruimen</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <time class="date-badge" datetime="2026-04-25">
+              <span class="date-day">25</span>
+              <span class="date-month">april</span>
+            </time>
+            <div class="activity-copy">
+              <span class="activity-type">Ontmoeten</span>
+              <h3>Spelletjesavond</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <time class="date-badge" datetime="2026-05-02">
+              <span class="date-day">2</span>
+              <span class="date-month">mei</span>
+            </time>
+            <div class="activity-copy">
+              <span class="activity-type">Samen buiten</span>
+              <h3>Zwerfafval opruimen</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <time class="date-badge" datetime="2026-05-17T11:00">
+              <span class="date-day">17</span>
+              <span class="date-month">mei · 11.00 uur</span>
+            </time>
+            <div class="activity-copy">
+              <span class="activity-type">Eropuit</span>
+              <h3>Wandeling met rondleiding bij de Eendenkooi</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <span class="date-badge date-badge--open">Datum volgt</span>
+            <div class="activity-copy">
+              <span class="activity-type">Ontmoeten</span>
+              <h3>Spelletjesavond</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <span class="date-badge date-badge--open">Zomer</span>
+            <div class="activity-copy">
+              <span class="activity-type">Samen genieten</span>
+              <h3>Buitenbios</h3>
+              <p class="activity-note">In de zomerperiode</p>
+            </div>
+          </li>
+          <li class="activity-row">
+            <span class="date-badge date-badge--open">Najaar</span>
+            <div class="activity-copy">
+              <span class="activity-type">Eropuit</span>
+              <h3>Filmontbijt bij de Verkadefabriek</h3>
+              <p class="activity-note">Een zondag in het najaar · 10.30 uur</p>
+            </div>
+          </li>
+          <li class="activity-row">
+            <time class="date-badge" datetime="2026-08-29">
+              <span class="date-day">29</span>
+              <span class="date-month">augustus</span>
+            </time>
+            <div class="activity-copy">
+              <span class="activity-type">Samen buiten</span>
+              <h3>Zwerfafval opruimen</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <span class="date-badge date-badge--open">Oktober</span>
+            <div class="activity-copy">
+              <span class="activity-type">Eropuit</span>
+              <h3>Herfstwandeling</h3>
+              <p class="activity-note">Datum volgt</p>
+            </div>
+          </li>
+          <li class="activity-row">
+            <time class="date-badge" datetime="2026-10-17">
+              <span class="date-day">17</span>
+              <span class="date-month">oktober</span>
+            </time>
+            <div class="activity-copy">
+              <span class="activity-type">Ontmoeten</span>
+              <h3>Barbecue</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <span class="date-badge date-badge--open">Datum volgt</span>
+            <div class="activity-copy">
+              <span class="activity-type">Creatief</span>
+              <h3>Schilderen in het Atelier in Haarsteeg</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <time class="date-badge" datetime="2026-11-14">
+              <span class="date-day">14</span>
+              <span class="date-month">november</span>
+            </time>
+            <div class="activity-copy">
+              <span class="activity-type">Samen buiten</span>
+              <h3>Zwerfafval opruimen</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <span class="date-badge date-badge--open">Datum volgt</span>
+            <div class="activity-copy">
+              <span class="activity-type">Samen spelen</span>
+              <h3>Lasergamen of voetballen op de Hoge Heide</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <span class="date-badge date-badge--open">Datum volgt</span>
+            <div class="activity-copy">
+              <span class="activity-type">Ontmoeten</span>
+              <h3>Spelletjesavond</h3>
+            </div>
+          </li>
+          <li class="activity-row">
+            <span class="date-badge date-badge--open">Datum volgt</span>
+            <div class="activity-copy">
+              <span class="activity-type">Creatief</span>
+              <h3>Knutselavond met kerstthema</h3>
+            </div>
+          </li>
+        </ol>
+
+        <p class="agenda-note">
+          Meer weten of gezellig aansluiten?
+          <a
+            href="https://forms.gle/4sLocw3XJjnkvDiP9"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Neem contact op</a
+          >.
+        </p>
       </section>
     </main>
   </body>
